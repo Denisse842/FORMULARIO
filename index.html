@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        function mostrarOtro() {
+            var select = document.getElementById("motivacion");
+            var otroCampo = document.getElementById("otro_motivo");
+            otroCampo.style.display = select.value === "otro_especifica" ? "block" : "none";
+        }
+        body {
+            background-image:url("adorable\ wallpaper★.jpg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: repeat;
+            font-family: hola;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            font-family: titulo;
+            color: #A42544;
+            font-size: 70px;
+           
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFF1F1;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        select,
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-top: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #FFC8DB;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+            @font-face { font-family: titulo;
+            src: url("Peachy\ Mochi.ttf");}
+            @font-face { font-family: cuerpo;
+            src: url("tangerine.ttf");}
+            @font-face { font-family: hola;
+            src: url("PlayGroups-Regular.ttf");}
+    </style>
+</head>
+<body>
+    <h1>❋ Perspectivas de vida ❋ </h1>
+   
+    <form action="#" method="post">
+      
+        <div class="form-group">
+            <label for="nombre"> ☺ <b>¿Cuál es su nombre?</b></label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">☺  <b>¿Cuál es su correo electrónico?</b></label>
+            <input type="email" id="email" name="email" required>
+        </div>
+       
+        <div class="form-group">
+            <p><b>1. ¿Cuál de las siguientes áreas consideras más importante para tu futuro?</b></p>
+            <label><input type="radio" name="pregunta1" value="a"> Carrera profesional</label><br>
+            <label><input type="radio" name="pregunta1" value="b"> Familia</label><br>
+            <label><input type="radio" name="pregunta1" value="c"> Salud</label><br>
+            <label><input type="radio" name="pregunta1" value="d"> Educación</label><br>
+            <label><input type="radio" name="pregunta1" value="e"> Ocio y tiempo libre</label><br>
+
+        </div>
+        <div class="form-group">
+            <label for="habilidades_conocimientos"> <b>2. ¿Qué habilidades o conocimientos te gustaría adquirir en los próximos años?</b></label>
+
+            <textarea id="habilidades_conocimientos" name="habilidades_conocimientos" rows="4" required></textarea>
+        </div>
+        <!-- Pregunta 18: Opción Múltiple -->
+        <div class="form-group">
+            <label><b>3. ¿Cómo te ves contribuyendo al medio ambiente en el futuro?</b></label> <br>
+            <label><input type="radio" name="pregunta3" value="a"> Reduciendo mi huella de carbono</label><br>
+            <label><input type="radio" name="pregunta3" value="b"> Participando en proyectos de conservación</label><br>
+            <label><input type="radio" name="pregunta3" value="c"> Apoyando políticas ambientales</label><br>
+            <label><input type="radio" name="pregunta3" value="d"> Otro (especifica): <input type="text" name="pregunta3_otro"></label><br>
+
+        </div>
+        
+        <div class="form-group">
+            <label><b>4. ¿Te gustaría vivir en tu ciudad actual en el futuro?</b></label> <br>
+            <label><input type="radio" name="pregunta4" value="a"> Sí</label><br>
+            <label><input type="radio" name="pregunta4" value="b"> No</label><br>
+            <label><input type="radio" name="pregunta4" value="c"> No estoy seguro/a</label><br>
+
+        </div>
+      
+        <div class="form-group">
+            <label><b>5. ¿Qué te motiva más: el éxito personal o el reconocimiento público?</b></label> <br>
+            <label><input type="radio" name="pregunta5" value="a"> Éxito personal</label><br>
+            <label><input type="radio" name="pregunta5" value="b"> Reconocimiento público</label><br>
+            <label><input type="radio" name="pregunta5" value="c"> Ambos por igual</label><br>
+            <label><input type="radio" name="pregunta5" value="d"> Ninguno en particular</label><br>
+
+        </div>
+        <!-- Pregunta 21: Opción Múltiple -->
+        <div class="form-group">
+            <label><b>6. ¿Qué papel juega la educación continua en tus planes futuros?</b></label> <br>
+            <label><input type="radio" name="pregunta6" value="a"> Muy importante</label><br>
+            <label><input type="radio" name="pregunta6" value="b"> Moderadamente importante</label><br>
+            <label><input type="radio" name="pregunta6" value="c"> Poco importante</label><br>
+            <label><input type="radio" name="pregunta6" value="d"> Nada importante</label><br>
+
+        </div>
+        <!-- Pregunta 22: Abierta -->
+        <div class="form-group">
+            <label for="manejando_fracasos"><b>7. ¿Cómo manejas los fracasos o contratiempos en tu camino hacia tus metas?</b></label>
+            <textarea id="manejando_fracasos" name="manejando_fracasos" rows="4" required></textarea>
+        </div>
+        <!-- Pregunta 23: Abierta -->
+        <div class="form-group">
+            <label for="sueno_vida"><b>8. ¿Cuál es el sueño más grande que tienes para tu vida?</b></label>
+            <textarea id="sueno_vida" name="sueno_vida" rows="4" required></textarea>
+        </div>
+        <!-- Pregunta 24: Abierta -->
+        <div class="form-group">
+            <label for="actividades_tiempo_libre"><b>9. ¿Qué te gustaría hacer si no hubiera limitaciones de tiempo, dinero o expectativas de otros?</b></label>
+            <textarea id="actividades_tiempo_libre" name="actividades_tiempo_libre" rows="4" required></textarea>
+        </div>
+        <!-- Pregunta 25: Abierta -->
+        <div class="form-group">
+            <label for="contenido_consumido"><b>10. ¿Qué tipo de contenido (libros, videos, podcasts) consumes y por qué te atrae?</b></label>
+            <textarea id="contenido_consumido" name="contenido_consumido" rows="4" required></textarea>
+        </div>
+        <!-- Pregunta 26: Opción Múltiple -->
+        <div class="form-group">
+            <label><b>11. ¿Qué esperas obtener de tu experiencia universitaria o de formación técnica?</b></label> <br>
+                <label><input type="radio" name="pregunta11" value="a"> Conocimientos especializados</label><br>
+                <label><input type="radio" name="pregunta11" value="a"> Redes de contactos</label><br>
+                <label><input type="radio" name="pregunta11" value="a"> Experiencias de vida</label><br>
+                <label><input type="radio" name="pregunta11" value="a"> Otro (especifica): <input type="text" name="pregunta11_otro"></label><br>
+
+        </div>
+        <!-- Pregunta 27: Opción Múltiple -->
+        <div class="form-group">
+            <label><b>12. ¿Qué tipo de actividades te gustaría realizar en tu tiempo libre en el futuro?</b></label> <br>
+            <label><input type="radio" name="pregunta12" value="a"> Viajar</label><br>
+            <label><input type="radio" name="pregunta12" value="b"> Deportes</label><br>
+            <label><input type="radio" name="pregunta12" value="c"> Actividades creativas</label><br>
+            <label><input type="radio" name="pregunta12" value="d"> Voluntariado</label><br>
+            <label><input type="radio" name="pregunta12" value="e"> Otro (especifica): <input type="text" name="pregunta12_otro"></label><br>
+
+        </div>
+        <!-- Pregunta 28: Opción Múltiple -->
+        <div class="form-group">
+            <label><b>13. ¿Qué valores son más importantes para ti al tomar decisiones sobre tu futuro?</b></label> <br>
+                <label><input type="radio" name="pregunta13" value="a"> Honestidad</label><br>
+                <label><input type="radio" name="pregunta13" value="b"> Responsabilidad</label><br>
+            <label><input type="radio" name="pregunta13" value="c"> Compasión</label><br>
+            <label><input type="radio" name="pregunta13" value="d"> Perseverancia</label><br>
+            <label><input type="radio" name="pregunta13" value="e"> Otro (especifica): <input type="text" name="pregunta13_otro"></label><br>
+
+        </div>
+        <!-- Pregunta 29: Opción Múltiple -->
+        <div class="form-group">
+            <label><b>14. ¿Qué rol tiene la autoevaluación en tu proceso de crecimiento personal y profesional?</b></label> <br>
+            <label><input type="radio" name="pregunta14" value="a"> Muy importante</label><br>
+            <label><input type="radio" name="pregunta14" value="b"> Moderadamente importante</label><br>
+            <label><input type="radio" name="pregunta14" value="c"> Poco importante</label><br>
+            <label><input type="radio" name="pregunta14" value="d"> Nada importante</label><br>
+
+        </div>
+        <!-- Pregunta 30: Opción Múltiple -->
+        <div class="form-group">
+            <label><b>15. ¿Cuál es tu mayor motivación para alcanzar tus metas?</b></label> <br>
+            <label><input type="radio" name="pregunta1" value="a"> Carrera profesional</label><br>
+            <label><input type="radio" name="pregunta1" value="b"> Familia</label><br>
+            <label><input type="radio" name="pregunta1" value="c"> Salud</label><br>
+            <label><input type="radio" name="pregunta1" value="d"> Educación</label><br>
+            <label><input type="radio" name="pregunta1" value="e"> Ocio y tiempo libre</label><br>
+
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
